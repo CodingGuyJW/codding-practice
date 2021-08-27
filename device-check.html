@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p class="print"></p>
+</body>
+</html>
+
+<style>
+    body{background:#000; color:#fff;}
+</style>
+
+<script>
+    let elP = document.querySelector('.print');
+    function isMobile() {
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.
+        test(navigator.userAgent);
+    }
+    if (isMobile()) {
+        // mobile
+        elP.innerText='You connected this site by mobile device.';
+    } else {
+        // not mobile
+        elP.innerText='You connected this site by non-mobile device.';
+    }
+</script>
